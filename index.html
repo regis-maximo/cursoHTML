@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aula 8 - Javascript </title>
+	<script type="text/javascript">
+		var data = new Date();
+		var meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+		var semana = new Array("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado");
+
+
+		document.write("<h1>Hoje é dia: " + semana[data.getDay()] + " " + data.getDate() + "/" + meses[data.getMonth()] + "/" + data.getFullYear() + "</h1>");
+
+		function movHora() {
+							var tempo = new Date();
+							var hora = tempo.getHours();
+							var min = tempo.getMinutes();
+							var seg = tempo.getSeconds();
+
+							if(hora < 10) {
+								hora = "0" + tempo.getHours();
+							}
+							if(min < 10) {
+								min = "0" + tempo.getMinutes();
+							}
+							if(seg < 10) {
+								seg = "0" + tempo.getSeconds();
+							}
+							var tempHoras = hora + ":" + min + ":" + seg;
+
+							document.fhora.mhora.value = tempHoras;
+
+							setTimeout("movHora()", 1000);
+	    }
+	</script>
+</head>
+<body onload="movHora()">
+
+	<form name="fhora">
+		<input type="text" name="mhora" size="4">
+	</form>
+
+</body>
+</html>

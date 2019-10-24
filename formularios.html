@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formularios</title>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+</head>
+<body>
+
+	<form name="cadastro" action="" method="POST" onsubmit="return validar()">
+
+		<label>Nome</label><br>
+		<input type="text" name="tnome" id="cnome" size="40" maxlength="35"
+		onfocus="mudaCor(this, 1)" onblur="mudaCor(this, 2)" /><br><br>
+
+		<label>Senha</label><br>
+		<input type="password" name="tsenha" id="csenha" max="10" maxlength="10"/><br><br>
+		
+		<label>Possui Veículo?</label><br>
+		<input type="radio" name="tveiculo" value="s">Sim<br>
+		<input type="radio" name="tveiculo" value="n">Não<br><br>
+
+		<label>Caso Possuí Veículo qual marca?</label><br>
+		<input type="checkbox" name="tfiat">FIAT<br>
+		<input type="checkbox" name="tvw">VW<br>
+		<input type="checkbox" name="tgm">GM<br>
+		<input type="checkbox" name="tkia">KIA<br>
+		<input type="checkbox" name="tbmw">BMW<br>
+		<input type="checkbox" name="tmds">MERCEDES<br>
+		<input type="checkbox" name="toutro">OUTRO<br><br>
+
+		<label>Selecione seu estado</label><br>
+		<select name="tuf">
+			<option value="MG">Minas Gerais</option>
+			<option value="SP" selected="">São Paulo</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="PR">Paraná</option>
+			<option value="RS">Rio Grande do Sul</option>
+		</select><br><br>
+
+		<label>Deixe seu Comentário</label><br>
+		<textarea name="tcomentario" cols="40" rows="5"></textarea><br>
+
+		<input type="submit" name="tenviar" value="Enviar"/> &nbsp
+		<input type="reset" name="tapagar" value="Apagar"/><br><br>
+	</form>
+
+</body>
+</html>
