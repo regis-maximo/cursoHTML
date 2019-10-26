@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>aula 36 - Javascript - aula 8 </title>
+	<style type="text/css">
+		#linha1 {
+			background-color: #8a8889;
+			text-align: center;
+			font-weight: bold;
+		}
+		table {
+			width: 550px;
+			border-collapse: collapse;
+		}
+		table td {
+			border: 1px solid #000000;
+
+			padding: 5px;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+		
+		function formatar() {
+
+			var tabela = document.getElementById('tb_produto');
+			var nlin = tabela.getElementsByTagName('tr');
+
+			for (i = 1; i < nlin.length; i++) {
+				 var j = nlin[i].getElementsByTagName('td');
+				 	if(j[1].firstChild.nodeValue <= 50) {
+				 		nlin[i].style.backgroundColor = "#ff0000";
+				 	} else {
+				 		nlin[i].style.backgroundColor = "#00ff00";
+				 	}
+			}
+			
+		}
+
+	</script>
+
+</head>
+<body onload="formatar()">
+
+	<table id="tb_produto">
+
+		<th>verde: estoque normal</th>
+		<th>vermelho: estoque acabando</th>
+
+		<TR id="linha1">
+			<td>Produto</td>
+			<td>Quantidade</td>
+			<td>Valor</td>
+		</TR>
+
+		<TR id="linha2">
+			<td>Mouse</td>
+			<td>100</td>
+			<td>25,00</td>
+		</TR>
+
+		<TR id="linha3">
+			<td>Monitor</td>
+			<td>85</td>
+			<td>30,00</td>
+		</TR>
+
+		<TR id="linha4">
+			<td>CPU</td>
+			<td>30</td>
+			<td>450,00</td>
+		</TR>
+	</table>
+
+</body>
+</html>
