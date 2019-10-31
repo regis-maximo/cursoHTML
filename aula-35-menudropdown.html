@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>aula - 35 menu DropDown</title>
+	<script type="text/javascript">
+		
+		function mostrar1() {
+
+			document.getElementById('s1').style.visibility='visible';
+			document.getElementById('s2').style.visibility='hidden';
+		}
+		function mostrar2() {
+			
+			document.getElementById('s2').style.visibility='visible';
+			document.getElementById('s1').style.visibility='hidden';
+		}
+		function escondeSub(obj) {
+			
+			obj.style.visibility='hidden';
+		}
+		
+
+	</script>
+
+	<style type="text/css">
+		
+		.menu {
+			background-color: #ccc;
+			width: 95px;
+			height: 20px;
+			border-right-style: solid;
+			border-right-width: 1px;
+			border-right-color: #fff;
+			padding-left: 5px;
+		}
+		.sub {
+			background-color: #888;
+			width: 95px;
+			visibility: hidden;
+			
+		}
+
+		#m1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#m2 {
+			position: absolute;
+			top: 0;
+			left: 101px;
+		}
+		#s1 {
+			position: absolute;
+			top: 20px;
+			left: 0;
+			padding-left: 5px;
+		}
+		#s2 {
+			position: absolute;
+			top: 20px;
+			left: 101px;
+			padding-left: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="menu" id="m1" onmouseover="mostrar1()">
+		Google
+	</div>
+	<div class="sub" id="s1" onmouseout="escondeSub(this)">
+		Youtube<br>
+		gmail<br>
+		maps<br>
+	</div>
+
+	<div class="menu" id="m2" onmouseover="mostrar2()">
+		Transportes
+	</div>
+	<div class="sub" id="s2" onmouseout="escondeSub(this)">
+		Carro<br>
+		Avião<br>
+		Navio<br>
+	</div>
+
+</body>
+</html>
